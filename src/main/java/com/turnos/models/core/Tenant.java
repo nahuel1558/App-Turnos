@@ -3,18 +3,26 @@ package com.turnos.models.core;
 import lombok.*;
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
-@Getter @Setter @NoArgsConstructor
+@Table (name = "tenant")
+@Builder @NoArgsConstructor @AllArgsConstructor
 public class Tenant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column (name = "nombre")
     private String nombre;
+    @Column (name = "dominio")
     private String dominio;
-    private String negocio;
-    private String direccion;
+    @Column (name = "rubro")
+    private String rubro;
+    @Column (name = "ubicacion")
+    private String ubicacion;
 
     @ManyToOne
-    private ConfigTenant configTenant;
+    @JoinColumn (name = "configuracion_tenant_id")
+    private ConfiguracionTenant configuracion;
 }

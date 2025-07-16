@@ -2,20 +2,33 @@ package com.turnos.models.core;
 
 import lombok.*;
 import jakarta.persistence.*;
+import org.hibernate.annotations.UuidGenerator;
+
+import java.util.UUID;
 
 @Entity
-@Getter @Setter @NoArgsConstructor
+@Table (name = "usuario")
+@Builder @NoArgsConstructor @AllArgsConstructor
 public class Usuario {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue
+    @UuidGenerator
+    private UUID id;
 
-    private String nombre;
-    private String apellido;
-    private String emial;
+    @Column (name = "nombre_apellido")
+    private String nombreApellido;
+
+    @Column (nullable = false, length = 100, name = "nombre_apellido")
+    private String passwordHash;
+
+    @Column (name = "email")
+    private String email;
+
+    @Column (name = "celular")
     private Long celular;
 
     @ManyToOne
+    @JoinColumn(name = "prefencia_mensajes")
     private PreferenciaMensajes preferenciaMensajes;
 
 }
