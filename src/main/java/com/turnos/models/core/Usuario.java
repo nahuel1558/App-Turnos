@@ -18,14 +18,14 @@ public class Usuario {
     @Column (name = "nombre_apellido")
     private String nombreApellido;
 
-    @Column (nullable = false, length = 100, name = "nombre_apellido")
-    private String passwordHash;
+    @Column (nullable = false, length = 100, name = "password")
+    private String password;
 
     @Column (name = "email")
     private String email;
 
     @Column (name = "celular")
-    private Long celular;
+    private String celular;
 
     @ManyToOne
     @JoinColumn(name = "prefencia_mensajes")

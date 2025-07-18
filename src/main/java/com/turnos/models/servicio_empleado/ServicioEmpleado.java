@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.UuidGenerator;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -14,13 +15,17 @@ import java.util.UUID;
 public class ServicioEmpleado {
 
     @Id
-    @GeneratedValue
-    @UuidGenerator
-    private UUID id;
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    @Column(name = "usuario_empelado")
+    @ManyToOne
+    @JoinColumn(name = "empelado_id")
     private Usuario empleado;
 
-    @Column (name = "servicio")
+    @ManyToOne
+    @JoinColumn (name = "servicio_id")
     private Servicio servicio;
+
+    private LocalDateTime fechaAsignacion;
+    private Boolean activo;
 }
