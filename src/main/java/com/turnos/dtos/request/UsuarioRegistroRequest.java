@@ -1,6 +1,6 @@
 package com.turnos.dtos.request;
 
-import com.turnos.models.core.PreferenciaMensajes;
+import com.turnos.models.core.PreferenciaNotificacionEnum;
 import lombok.Data;
 
 @Data
@@ -9,6 +9,6 @@ public class UsuarioRegistroRequest {
     private String password;
     private String email;
     private String celular;
-    private PreferenciaMensajes preferenciaMensajes;
+    private PreferenciaNotificacionEnum preferenciaNotificacionEnum;
     private Long tenantId;
 }
