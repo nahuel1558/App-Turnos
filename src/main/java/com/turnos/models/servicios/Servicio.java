@@ -25,6 +25,9 @@ public class Servicio {
     @Column (name = "precio")
     private BigDecimal precio;
 
+    @Column(name = "descripcion")
+    private String descripcion;
+
     @Column (name = "requiere_seña")
     private Boolean requiereSeña;
 

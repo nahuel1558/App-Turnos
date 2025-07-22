@@ -23,6 +23,9 @@ public class Turno {
     @Column (name = "fecha_hora_inicio")
     private LocalDateTime fechaHoraFin;
 
+    @Column(name = "comentario")
+    private String comentario;
+
     @ManyToOne
     @JoinColumn (name = "cliente_id")
     private Usuario cliente;

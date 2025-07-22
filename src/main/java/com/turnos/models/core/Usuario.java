@@ -29,6 +29,6 @@ public class Usuario {
 
     @ManyToOne
     @JoinColumn(name = "prefencia_mensajes")
-    private PreferenciaMensajes preferenciaMensajes;
+    private PreferenciaNotificacionEnum preferenciaNotificacionEnum;
 
 }
