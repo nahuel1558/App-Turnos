@@ -1,6 +1,6 @@
 package com.turnos.dtos.request;
 
-import com.turnos.models.pagos.TipoPagoEnum;
+import com.turnos.domain.models.pagos.TipoPagoEnum;
 import lombok.Data;
 
 import java.math.BigDecimal;

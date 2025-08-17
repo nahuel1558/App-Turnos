@@ -1,7 +1,7 @@
 package com.turnos.dtos.response;
 
-import com.turnos.models.pagos.EstadoPagoEnum;
-import com.turnos.models.pagos.TipoPagoEnum;
+import com.turnos.domain.models.pagos.EstadoPagoEnum;
+import com.turnos.domain.models.pagos.TipoPagoEnum;
 import lombok.Builder;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;

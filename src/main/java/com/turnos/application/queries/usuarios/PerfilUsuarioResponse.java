@@ -1,4 +1,4 @@
-package com.turnos.dtos.response;
+package com.turnos.application.queries.usuarios;
 
 import com.turnos.domain.models.core.PreferenciaNotificacionEnum;
 import lombok.Builder;
@@ -10,10 +10,11 @@ import java.util.UUID;
 @Value
 @Builder
 @Jacksonized
-public class UsuarioResponse {
+public class PerfilUsuarioResponse {
     UUID usuarioId;
     String nombreApellido;
     String email;
+    String password;
     String celular;
     PreferenciaNotificacionEnum preferenciaNotificacionEnum;
 }

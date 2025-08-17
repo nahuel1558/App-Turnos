@@ -1,7 +1,7 @@
 package com.turnos.dtos.response;
 
 
-import com.turnos.models.turnos.EstadoTurnoEnum;
+import com.turnos.domain.models.turnos.EstadoTurnoEnum;
 import lombok.Builder;
 import lombok.Value;
 import lombok.extern.jackson.Jacksonized;

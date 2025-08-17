@@ -1,6 +1,6 @@
 package com.turnos.dtos.request;
 
-import com.turnos.models.core.PreferenciaNotificacionEnum;
+import com.turnos.domain.models.core.PreferenciaNotificacionEnum;
 import lombok.Data;
 
 @Data
